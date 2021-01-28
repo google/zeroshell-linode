@@ -26,19 +26,23 @@ I would expect that you've read Linode documentation and know the basics.
   4. Create Installation etx4 disk of at least 2GB
   5. Create Profiles ext3/4 disk of at least 1GB (order of creation is important)
   6. Go into the Rescue Mode
-  7. Grab installation files from github:
+  7. Grab installation files from GitHub:
+  
     1. apt-get update
     2. apt-get install --yes git
     3. git clone https://github.com/timothybasanov/zeroshell-linode.git
     4. cd zeroshell-linode.git
+    
   5. ./install.sh
   6. Wait for several hours... until it's ready
-  7. Create new Configuration Profile
-    8. pv-grub-x86-32
-    9. /dev/xvda: ZeroShell
-    10. /dev/xvdb: Profiles
-    11. Root device: /dev/xvda
-    12. All Filesystem/Boot Helper knobs enabled
+  7. Create new Configuration Profile:
+  
+    1. pv-grub-x86-32
+    2. /dev/xvda: ZeroShell
+    3. /dev/xvdb: Profiles
+    4. Root device: /dev/xvda
+    5. All Filesystem/Boot Helper knobs enabled
+    
   8. Restart into new configuration and wait for ZeroShell to start in lish console
   9. Go to IP Manager and enable DHCP client: ih<Enter>Enabled<Enter>q
   10. Enable Fail-Safe Mode
